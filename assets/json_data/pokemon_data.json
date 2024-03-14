@@ -1,0 +1,105 @@
+{
+  "pokemon": [
+    {
+      "pokemonName": "charizard",
+      "pokemonImg": "assets/pokemon_img/pokemon_1.svg",
+      "pokemonTags": [
+        {
+          "tag": "\uD83D\uDD25 Fire"
+        },
+        {
+          "tag": "\uD83E\uDD8B Flying"
+        }
+      ],
+      "pokemonDetails": {
+        "height": "1.0m",
+        "weight": "13.0kg",
+        "abilities": "overgrow,chlorophyll",
+        "hp": 50,
+        "attack" : 60,
+        "defence" : 80
+      },
+      "similar": [
+        {
+          "pokemonName": "charizard",
+          "pokemonImg": "assets/pokemon_img/pokemon_1.svg"
+        }
+      ]
+    },
+    {
+      "pokemonName": "ivysaur",
+      "pokemonImg": "assets/pokemon_img/pokemon_2.svg",
+      "pokemonTags": [
+        {
+          "tag": "\uD83C\uDF3F Grass"
+        },
+        {
+          "tag": "☠\uFE0F Poison"
+        }
+      ],
+      "pokemonDetails": {
+        "height": "1.0m",
+        "weight": "13.0kg",
+        "abilities": "overgrow,chlorophyll",
+        "hp": 40,
+        "attack" : 80,
+        "defence" : 90
+      },
+      "similar": [
+        {
+          "pokemonName": "ivysaur",
+          "pokemonImg": "assets/pokemon_img/pokemon_2.svg"
+        }
+      ]
+    },
+    {
+      "pokemonName": "beedrill",
+      "pokemonImg": "assets/pokemon_img/pokemon_3.svg",
+      "pokemonTags": [
+        {
+          "tag": "\uD83D\uDC3B Normal"
+        }
+      ],
+      "pokemonDetails": {
+        "height": "1.0m",
+        "weight": "13.0kg",
+        "abilities": "overgrow,chlorophyll",
+        "hp": 40,
+        "attack" : 80,
+        "defence" : 90
+      },
+      "similar": [
+        {
+          "pokemonName": "beedrill",
+          "pokemonImg": "assets/pokemon_img/pokemon_3.svg"
+        }
+      ]
+    },
+    {
+      "pokemonName": "charizard",
+      "pokemonImg": "assets/pokemon_img/pokemon_4.svg",
+      "pokemonTags": [
+        {
+          "tag": "\uD83D\uDC1E Bug"
+        },
+        {
+          "tag": "☠\uFE0F Poison"
+        }
+      ],
+      "pokemonDetails": {
+        "height": "1.0m",
+        "weight": "13.0kg",
+        "abilities": "overgrow,chlorophyll",
+        "hp": 20,
+        "attack" : 10,
+        "defence" : 90
+      },
+      "similar": [
+        {
+          "pokemonName": "charizard",
+          "pokemonImg": "assets/pokemon_img/pokemon_4.svg"
+        }
+      ]
+    }
+  ]
+}
