@@ -23,16 +23,16 @@ mixin _$PokemonData {
   List<Pokemon> get pokemon => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
-  $PokemonDataCopyWith<PokemonData> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PokemonDataCopyWith<PokemonData> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PokemonDataCopyWith<$Res> {
-  factory $PokemonDataCopyWith(
-          PokemonData value, $Res Function(PokemonData) then) =
+  factory $PokemonDataCopyWith(PokemonData value, $Res Function(PokemonData) then) =
       _$PokemonDataCopyWithImpl<$Res, PokemonData>;
+
   @useResult
   $Res call({List<Pokemon> pokemon});
 }
@@ -44,6 +44,7 @@ class _$PokemonDataCopyWithImpl<$Res, $Val extends PokemonData>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -62,11 +63,11 @@ class _$PokemonDataCopyWithImpl<$Res, $Val extends PokemonData>
 }
 
 /// @nodoc
-abstract class _$$PokemonDataImplCopyWith<$Res>
-    implements $PokemonDataCopyWith<$Res> {
+abstract class _$$PokemonDataImplCopyWith<$Res> implements $PokemonDataCopyWith<$Res> {
   factory _$$PokemonDataImplCopyWith(
           _$PokemonDataImpl value, $Res Function(_$PokemonDataImpl) then) =
       __$$PokemonDataImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call({List<Pokemon> pokemon});
@@ -76,8 +77,7 @@ abstract class _$$PokemonDataImplCopyWith<$Res>
 class __$$PokemonDataImplCopyWithImpl<$Res>
     extends _$PokemonDataCopyWithImpl<$Res, _$PokemonDataImpl>
     implements _$$PokemonDataImplCopyWith<$Res> {
-  __$$PokemonDataImplCopyWithImpl(
-      _$PokemonDataImpl _value, $Res Function(_$PokemonDataImpl) _then)
+  __$$PokemonDataImplCopyWithImpl(_$PokemonDataImpl _value, $Res Function(_$PokemonDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -97,13 +97,12 @@ class __$$PokemonDataImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PokemonDataImpl implements _PokemonData {
-  const _$PokemonDataImpl({required final List<Pokemon> pokemon})
-      : _pokemon = pokemon;
+  const _$PokemonDataImpl({required final List<Pokemon> pokemon}) : _pokemon = pokemon;
 
-  factory _$PokemonDataImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PokemonDataImplFromJson(json);
+  factory _$PokemonDataImpl.fromJson(Map<String, dynamic> json) => _$$PokemonDataImplFromJson(json);
 
   final List<Pokemon> _pokemon;
+
   @override
   List<Pokemon> get pokemon {
     if (_pokemon is EqualUnmodifiableListView) return _pokemon;
@@ -126,8 +125,7 @@ class _$PokemonDataImpl implements _PokemonData {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_pokemon));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_pokemon));
 
   @JsonKey(ignore: true)
   @override
@@ -144,16 +142,14 @@ class _$PokemonDataImpl implements _PokemonData {
 }
 
 abstract class _PokemonData implements PokemonData {
-  const factory _PokemonData({required final List<Pokemon> pokemon}) =
-      _$PokemonDataImpl;
+  const factory _PokemonData({required final List<Pokemon> pokemon}) = _$PokemonDataImpl;
 
-  factory _PokemonData.fromJson(Map<String, dynamic> json) =
-      _$PokemonDataImpl.fromJson;
+  factory _PokemonData.fromJson(Map<String, dynamic> json) = _$PokemonDataImpl.fromJson;
 
   @override
   List<Pokemon> get pokemon;
+
   @override
   @JsonKey(ignore: true)
-  _$$PokemonDataImplCopyWith<_$PokemonDataImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PokemonDataImplCopyWith<_$PokemonDataImpl> get copyWith => throw _privateConstructorUsedError;
 }

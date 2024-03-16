@@ -1,4 +1,3 @@
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'pokemon_details.freezed.dart';
@@ -15,5 +14,5 @@ class PokemonDetails with _$PokemonDetails {
     required int defence,
   }) = _PokemonDetails;
 
-  factory PokemonDetails.fromJson(Map<String,dynamic> json) => _$PokemonDetailsFromJson(json);
+  factory PokemonDetails.fromJson(Map<String, dynamic> json) => _$PokemonDetailsFromJson(json);
 }

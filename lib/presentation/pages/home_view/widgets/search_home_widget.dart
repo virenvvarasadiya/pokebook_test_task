@@ -8,7 +8,7 @@ class SearchHomeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.primary,
         borderRadius: BorderRadius.circular(60),
@@ -16,9 +16,7 @@ class SearchHomeWidget extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       child: TextFormField(
         style: GoogleFonts.sofiaSans(
-            color: Theme.of(context).colorScheme.shadow,
-            fontSize: 20,
-            fontWeight: FontWeight.w400),
+            color: Theme.of(context).colorScheme.shadow, fontSize: 20, fontWeight: FontWeight.w400),
         decoration: InputDecoration(
             fillColor: Theme.of(context).colorScheme.background,
             filled: true,
@@ -40,19 +38,17 @@ class SearchHomeWidget extends StatelessWidget {
                 height: 48,
                 width: 48,
                 margin: const EdgeInsets.only(right: 8),
-                decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Theme.of(context).colorScheme.shadow.withOpacity(0.3),
-                        blurRadius: 3.0, // soften the shadow
-                        spreadRadius: 0.0, //extend the shadow
-                        offset: const Offset(
-                          0.5, // Move to right 10  horizontally
-                          2.0, // Move to bottom 10 Vertically
-                        ),
-                      )
-                    ],
-                    color: Theme.of(context).colorScheme.primary, shape: BoxShape.circle),
+                decoration: BoxDecoration(boxShadow: [
+                  BoxShadow(
+                    color: Theme.of(context).colorScheme.shadow.withOpacity(0.3),
+                    blurRadius: 3.0, // soften the shadow
+                    spreadRadius: 0.0, //extend the shadow
+                    offset: const Offset(
+                      0.5, // Move to right 10  horizontally
+                      2.0, // Move to bottom 10 Vertically
+                    ),
+                  )
+                ], color: Theme.of(context).colorScheme.primary, shape: BoxShape.circle),
                 child: Icon(
                   Icons.search,
                   color: Theme.of(context).colorScheme.background,

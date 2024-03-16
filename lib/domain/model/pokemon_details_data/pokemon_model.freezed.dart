@@ -21,12 +21,17 @@ Pokemon _$PokemonFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Pokemon {
   String? get pokemonName => throw _privateConstructorUsedError;
+
   String? get pokemonImg => throw _privateConstructorUsedError;
+
   List<PokemonTags>? get pokemonTags => throw _privateConstructorUsedError;
+
   PokemonDetails? get pokemonDetails => throw _privateConstructorUsedError;
+
   List<PokemonSimilar>? get similar => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $PokemonCopyWith<Pokemon> get copyWith => throw _privateConstructorUsedError;
 }
@@ -35,6 +40,7 @@ mixin _$Pokemon {
 abstract class $PokemonCopyWith<$Res> {
   factory $PokemonCopyWith(Pokemon value, $Res Function(Pokemon) then) =
       _$PokemonCopyWithImpl<$Res, Pokemon>;
+
   @useResult
   $Res call(
       {String? pokemonName,
@@ -47,12 +53,12 @@ abstract class $PokemonCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PokemonCopyWithImpl<$Res, $Val extends Pokemon>
-    implements $PokemonCopyWith<$Res> {
+class _$PokemonCopyWithImpl<$Res, $Val extends Pokemon> implements $PokemonCopyWith<$Res> {
   _$PokemonCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -104,9 +110,9 @@ class _$PokemonCopyWithImpl<$Res, $Val extends Pokemon>
 
 /// @nodoc
 abstract class _$$PokemonImplCopyWith<$Res> implements $PokemonCopyWith<$Res> {
-  factory _$$PokemonImplCopyWith(
-          _$PokemonImpl value, $Res Function(_$PokemonImpl) then) =
+  factory _$$PokemonImplCopyWith(_$PokemonImpl value, $Res Function(_$PokemonImpl) then) =
       __$$PokemonImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
@@ -121,11 +127,9 @@ abstract class _$$PokemonImplCopyWith<$Res> implements $PokemonCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$PokemonImplCopyWithImpl<$Res>
-    extends _$PokemonCopyWithImpl<$Res, _$PokemonImpl>
+class __$$PokemonImplCopyWithImpl<$Res> extends _$PokemonCopyWithImpl<$Res, _$PokemonImpl>
     implements _$$PokemonImplCopyWith<$Res> {
-  __$$PokemonImplCopyWithImpl(
-      _$PokemonImpl _value, $Res Function(_$PokemonImpl) _then)
+  __$$PokemonImplCopyWithImpl(_$PokemonImpl _value, $Res Function(_$PokemonImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -174,14 +178,14 @@ class _$PokemonImpl implements _Pokemon {
       : _pokemonTags = pokemonTags,
         _similar = similar;
 
-  factory _$PokemonImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PokemonImplFromJson(json);
+  factory _$PokemonImpl.fromJson(Map<String, dynamic> json) => _$$PokemonImplFromJson(json);
 
   @override
   final String? pokemonName;
   @override
   final String? pokemonImg;
   final List<PokemonTags>? _pokemonTags;
+
   @override
   List<PokemonTags>? get pokemonTags {
     final value = _pokemonTags;
@@ -194,6 +198,7 @@ class _$PokemonImpl implements _Pokemon {
   @override
   final PokemonDetails? pokemonDetails;
   final List<PokemonSimilar>? _similar;
+
   @override
   List<PokemonSimilar>? get similar {
     final value = _similar;
@@ -213,12 +218,9 @@ class _$PokemonImpl implements _Pokemon {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PokemonImpl &&
-            (identical(other.pokemonName, pokemonName) ||
-                other.pokemonName == pokemonName) &&
-            (identical(other.pokemonImg, pokemonImg) ||
-                other.pokemonImg == pokemonImg) &&
-            const DeepCollectionEquality()
-                .equals(other._pokemonTags, _pokemonTags) &&
+            (identical(other.pokemonName, pokemonName) || other.pokemonName == pokemonName) &&
+            (identical(other.pokemonImg, pokemonImg) || other.pokemonImg == pokemonImg) &&
+            const DeepCollectionEquality().equals(other._pokemonTags, _pokemonTags) &&
             (identical(other.pokemonDetails, pokemonDetails) ||
                 other.pokemonDetails == pokemonDetails) &&
             const DeepCollectionEquality().equals(other._similar, _similar));
@@ -260,16 +262,20 @@ abstract class _Pokemon implements Pokemon {
 
   @override
   String? get pokemonName;
+
   @override
   String? get pokemonImg;
+
   @override
   List<PokemonTags>? get pokemonTags;
+
   @override
   PokemonDetails? get pokemonDetails;
+
   @override
   List<PokemonSimilar>? get similar;
+
   @override
   @JsonKey(ignore: true)
-  _$$PokemonImplCopyWith<_$PokemonImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PokemonImplCopyWith<_$PokemonImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -13,11 +13,14 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   final PokemonDataSource pokemonDataSource = PokemonDataSource();
   final PokemonRepository pokemonRepository = PokemonRepositoryImpl(pokemonDataSource);
-  runApp(MyApp(pokemonRepository: pokemonRepository,));
+  runApp(MyApp(
+    pokemonRepository: pokemonRepository,
+  ));
 }
 
 class MyApp extends StatelessWidget {
   final PokemonRepository? pokemonRepository;
+
   MyApp({super.key, this.pokemonRepository});
 
   final appRouter = AppRouter();
@@ -35,7 +38,8 @@ class MyApp extends StatelessWidget {
       ],
       child: BlocBuilder<PokemonBloc, PokemonState>(
         builder: (context, state) {
-          if(state is ThemeLoadSuccess){
+          if (state is ThemeLoadSuccess) {
+            print("Theme is :: :${state.themeData}");
             theme = state.themeData;
             context.read<PokemonBloc>().add(GetPokemonEvent());
           }

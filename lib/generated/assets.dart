@@ -11,5 +11,4 @@ class Assets {
   static const String pokemonImgPokemon3 = 'assets/pokemon_img/pokemon_3.svg';
   static const String pokemonImgPokemon4 = 'assets/pokemon_img/pokemon_4.svg';
   static const String pokemonImgPokemonBg = 'assets/pokemon_img/pokemon_bg.png';
-
 }

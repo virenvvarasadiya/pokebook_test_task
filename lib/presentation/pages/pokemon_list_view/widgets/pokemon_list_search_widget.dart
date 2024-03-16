@@ -24,9 +24,7 @@ class PokemonListingSearchWidget extends StatelessWidget {
       ),
       child: TextFormField(
         style: GoogleFonts.sofiaSans(
-            color: Theme.of(context).colorScheme.shadow,
-            fontSize: 20,
-            fontWeight: FontWeight.w400),
+            color: Theme.of(context).colorScheme.shadow, fontSize: 20, fontWeight: FontWeight.w400),
         decoration: InputDecoration(
             fillColor: Theme.of(context).colorScheme.background,
             filled: true,

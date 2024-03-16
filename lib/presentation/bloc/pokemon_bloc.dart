@@ -9,7 +9,6 @@ import 'package:test_task/utils/Theme/pink_theme.dart';
 import 'package:test_task/utils/Theme/yellow_theme.dart';
 
 part 'pokemon_event.dart';
-
 part 'pokemon_state.dart';
 
 class PokemonBloc extends Bloc<PokemonEvent, PokemonState> {
@@ -19,6 +18,7 @@ class PokemonBloc extends Bloc<PokemonEvent, PokemonState> {
     on<GetPokemonEvent>(onGetPokemonEvent);
     on<FetchPokemonDataEvent>(onFetchPokemonData);
     on<ChangeAppThemeEvent>(onChangeAppTheme);
+    on<PaginatePokemonDataEvent>(getPaginateData);
   }
 
   TabController? tabController;
@@ -29,21 +29,62 @@ class PokemonBloc extends Bloc<PokemonEvent, PokemonState> {
     const Color(0xFFdca62c)
   ];
   Color selectedColor = const Color(0xFFe95d89);
+  int currentPage = 1;
+  int totalPages = 1;
 
-  Pokemon pokemon = const Pokemon();
+  Pokemon pokemon = Pokemon();
+
+  List<Pokemon> pokemonFinalList = [];
+  List<Pokemon> pokemonListData = [];
 
   Future onGetPokemonEvent(GetPokemonEvent event, Emitter<PokemonState> emit) async {
     try {
       emit(PokemonLoading());
       List<Pokemon> pokemonList = await getPokemonUseCase.execute();
+      pokemonFinalList = pokemonList;
+      pokemonListData = pokemonList;
 
-      emit(PokemonLoadSuccess(pokemonList));
+      emit(PokemonLoadSuccess(null));
     } catch (e) {
       emit(PokemonLoadFailure('Failed to load pokemon: $e'));
     }
   }
 
-  onFetchPokemonData(FetchPokemonDataEvent event, Emitter<PokemonState> emit){
+  getPaginateData(PaginatePokemonDataEvent event, Emitter<PokemonState> emit) {
+    try {
+      emit(PokemonLoading());
+      currentPage = event.pageIndex;
+      final list = pokemonFinalList;
+      int dataLength = list.length;
+      int dataPerPage = 2;
+      totalPages = dataLength ~/ dataPerPage;
+
+      int startIndex = 0;
+      int endIndex = 0;
+
+      if (currentPage != 1) {
+        startIndex = (currentPage - 1) * dataPerPage;
+        endIndex = (currentPage) * dataPerPage;
+        if (currentPage == totalPages) {
+          endIndex = list.length;
+        }
+      } else {
+        if (dataPerPage > (list.length)) {
+          endIndex = list.length;
+        } else {
+          endIndex = (startIndex + 1) * dataPerPage;
+        }
+      }
+
+      List<Pokemon> currentPageData = list.sublist(startIndex, endIndex);
+
+      emit(PokemonLoadSuccess(currentPageData));
+    } catch (e) {
+      emit(PokemonLoadFailure('Failed to load pokemon: $e'));
+    }
+  }
+
+  onFetchPokemonData(FetchPokemonDataEvent event, Emitter<PokemonState> emit) {
     pokemon = event.pokemon;
   }
 

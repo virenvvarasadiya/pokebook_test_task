@@ -1,7 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:test_task/domain/model/pokemon_details_data/pokemon_model.dart';
+import 'package:test_task/presentation/bloc/pokemon_bloc.dart';
+import 'package:test_task/route/app_router.dart';
 import 'package:test_task/utils/common_spacer.dart';
 
 Widget pokemonCard({required BuildContext context, required Pokemon pokemon}) {
@@ -9,32 +13,44 @@ Widget pokemonCard({required BuildContext context, required Pokemon pokemon}) {
     padding: const EdgeInsets.only(top: 10.0),
     child: Stack(
       children: [
-        Container(
-          padding: const EdgeInsets.only(top: 55),
-          child: Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(26),
-                color: Theme.of(context).colorScheme.background),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Column(
-                children: [
-                  Container(
-                    height: 200,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Theme.of(context).colorScheme.onSecondary),
+        Material(
+          color: Colors.transparent,
+          child: InkWell(
+            hoverColor: Colors.transparent,
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () {
+              context.read<PokemonBloc>().add(FetchPokemonDataEvent(pokemon));
+              context.router.push(const PokemonDetailsViewRoute());
+            },
+            child: Container(
+              padding: const EdgeInsets.only(top: 55),
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(26),
+                    color: Theme.of(context).colorScheme.background),
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 200,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Theme.of(context).colorScheme.onSecondary),
+                      ),
+                      height(20),
+                      pokemonInfoView(context: context, pokemon: pokemon),
+                      /*     InkWell(
+                          onTap: () {
+                            context.router.push(const PokemonDetailsViewRoute());
+                          },
+                          child: Icon(Icons.visibility))*/
+                    ],
                   ),
-                  height(20),
-                  pokemonInfoView(context: context, pokemon: pokemon),
-                  /*     InkWell(
-                      onTap: () {
-                        context.router.push(const PokemonDetailsViewRoute());
-                      },
-                      child: Icon(Icons.visibility))*/
-                ],
+                ),
               ),
             ),
           ),

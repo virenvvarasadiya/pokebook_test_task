@@ -21,31 +21,30 @@ PokemonDetails _$PokemonDetailsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PokemonDetails {
   String get height => throw _privateConstructorUsedError;
+
   String get weight => throw _privateConstructorUsedError;
+
   String get abilities => throw _privateConstructorUsedError;
+
   int get hp => throw _privateConstructorUsedError;
+
   int get attack => throw _privateConstructorUsedError;
+
   int get defence => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
-  $PokemonDetailsCopyWith<PokemonDetails> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PokemonDetailsCopyWith<PokemonDetails> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PokemonDetailsCopyWith<$Res> {
-  factory $PokemonDetailsCopyWith(
-          PokemonDetails value, $Res Function(PokemonDetails) then) =
+  factory $PokemonDetailsCopyWith(PokemonDetails value, $Res Function(PokemonDetails) then) =
       _$PokemonDetailsCopyWithImpl<$Res, PokemonDetails>;
+
   @useResult
-  $Res call(
-      {String height,
-      String weight,
-      String abilities,
-      int hp,
-      int attack,
-      int defence});
+  $Res call({String height, String weight, String abilities, int hp, int attack, int defence});
 }
 
 /// @nodoc
@@ -55,6 +54,7 @@ class _$PokemonDetailsCopyWithImpl<$Res, $Val extends PokemonDetails>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -98,20 +98,14 @@ class _$PokemonDetailsCopyWithImpl<$Res, $Val extends PokemonDetails>
 }
 
 /// @nodoc
-abstract class _$$PokemonDetailsImplCopyWith<$Res>
-    implements $PokemonDetailsCopyWith<$Res> {
-  factory _$$PokemonDetailsImplCopyWith(_$PokemonDetailsImpl value,
-          $Res Function(_$PokemonDetailsImpl) then) =
+abstract class _$$PokemonDetailsImplCopyWith<$Res> implements $PokemonDetailsCopyWith<$Res> {
+  factory _$$PokemonDetailsImplCopyWith(
+          _$PokemonDetailsImpl value, $Res Function(_$PokemonDetailsImpl) then) =
       __$$PokemonDetailsImplCopyWithImpl<$Res>;
+
   @override
   @useResult
-  $Res call(
-      {String height,
-      String weight,
-      String abilities,
-      int hp,
-      int attack,
-      int defence});
+  $Res call({String height, String weight, String abilities, int hp, int attack, int defence});
 }
 
 /// @nodoc
@@ -200,8 +194,7 @@ class _$PokemonDetailsImpl implements _PokemonDetails {
             other is _$PokemonDetailsImpl &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.weight, weight) || other.weight == weight) &&
-            (identical(other.abilities, abilities) ||
-                other.abilities == abilities) &&
+            (identical(other.abilities, abilities) || other.abilities == abilities) &&
             (identical(other.hp, hp) || other.hp == hp) &&
             (identical(other.attack, attack) || other.attack == attack) &&
             (identical(other.defence, defence) || other.defence == defence));
@@ -209,15 +202,13 @@ class _$PokemonDetailsImpl implements _PokemonDetails {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, height, weight, abilities, hp, attack, defence);
+  int get hashCode => Object.hash(runtimeType, height, weight, abilities, hp, attack, defence);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PokemonDetailsImplCopyWith<_$PokemonDetailsImpl> get copyWith =>
-      __$$PokemonDetailsImplCopyWithImpl<_$PokemonDetailsImpl>(
-          this, _$identity);
+      __$$PokemonDetailsImplCopyWithImpl<_$PokemonDetailsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -236,21 +227,26 @@ abstract class _PokemonDetails implements PokemonDetails {
       required final int attack,
       required final int defence}) = _$PokemonDetailsImpl;
 
-  factory _PokemonDetails.fromJson(Map<String, dynamic> json) =
-      _$PokemonDetailsImpl.fromJson;
+  factory _PokemonDetails.fromJson(Map<String, dynamic> json) = _$PokemonDetailsImpl.fromJson;
 
   @override
   String get height;
+
   @override
   String get weight;
+
   @override
   String get abilities;
+
   @override
   int get hp;
+
   @override
   int get attack;
+
   @override
   int get defence;
+
   @override
   @JsonKey(ignore: true)
   _$$PokemonDetailsImplCopyWith<_$PokemonDetailsImpl> get copyWith =>

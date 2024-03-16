@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -78,18 +77,21 @@ class ThemePickerDialog extends StatelessWidget {
                                                 child: InkWell(
                                                   onTap: () {
                                                     context.router.pop();
-                                                    context
-                                                        .read<PokemonBloc>()
-                                                        .add(ChangeAppThemeEvent(pokemonBloc.colorList[index]));
+                                                    context.read<PokemonBloc>().add(
+                                                        ChangeAppThemeEvent(
+                                                            pokemonBloc.colorList[index]));
                                                   },
                                                   child: Container(
                                                     padding: const EdgeInsets.all(3),
                                                     decoration: BoxDecoration(
                                                         shape: BoxShape.circle,
                                                         border: Border.all(
-                                                            color: pokemonBloc.colorList[index] == pokemonBloc.selectedColor ? Theme.of(context)
-                                                                .colorScheme
-                                                                .shadow : Colors.transparent),
+                                                            color: pokemonBloc.colorList[index] ==
+                                                                    pokemonBloc.selectedColor
+                                                                ? Theme.of(context)
+                                                                    .colorScheme
+                                                                    .shadow
+                                                                : Colors.transparent),
                                                         color: Colors.transparent),
                                                     child: Container(
                                                       decoration: BoxDecoration(

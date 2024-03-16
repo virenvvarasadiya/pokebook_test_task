@@ -14,7 +14,7 @@ class PokemonLoadFailure extends PokemonState {
 }
 
 class PokemonLoadSuccess extends PokemonState {
-  final List<Pokemon> pokemon;
+  final List<Pokemon>? pokemon;
 
   PokemonLoadSuccess(this.pokemon);
 }
@@ -24,4 +24,5 @@ class ThemeLoadSuccess extends PokemonState {
 
   ThemeLoadSuccess(this.themeData);
 }
+
 class FetchSelectedDataLoadSuccess extends PokemonState {}

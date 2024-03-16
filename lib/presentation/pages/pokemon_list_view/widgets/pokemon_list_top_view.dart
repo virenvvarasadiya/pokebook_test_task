@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,12 +12,16 @@ class PokemonListTopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 8.0,left: 15,right: 10),
+      padding: const EdgeInsets.only(top: 8.0, left: 15, right: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SvgPicture.asset(Assets.pokemonImgHomeIcon,width: 114,height: 75,),
+          SvgPicture.asset(
+            Assets.pokemonImgHomeIcon,
+            width: 114,
+            height: 75,
+          ),
           width(8),
           Padding(
             padding: const EdgeInsets.only(top: 8.0),
@@ -45,8 +48,7 @@ class PokemonListTopView extends StatelessWidget {
             child: InkWell(
               onTap: () {
                 showDialog<String>(
-                    context: context,
-                    builder: (BuildContext context) => const ThemePickerDialog());
+                    context: context, builder: (BuildContext context) => ThemePickerDialog());
               },
               borderRadius: BorderRadius.circular(30),
               child: Container(
@@ -56,13 +58,10 @@ class PokemonListTopView extends StatelessWidget {
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(color: Theme.of(context).colorScheme.shadow),
-                    color: Theme.of(context).colorScheme.background
-                ),
+                    color: Theme.of(context).colorScheme.background),
                 child: Container(
                   decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Theme.of(context).colorScheme.primary
-                  ),
+                      shape: BoxShape.circle, color: Theme.of(context).colorScheme.primary),
                 ),
               ),
             ),

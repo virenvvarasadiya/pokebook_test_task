@@ -20,5 +20,5 @@ const blueColorScheme = ColorScheme(
     onBackground: Color(0xFFE9E9E9),
     surface: Color(0xFF40b9db),
     onSurface: Color(0xFF7B7B7B),
-    shadow: Colors.black
-);
+    shadow: Colors.black,
+    errorContainer: Color(0xFFE1E1E1));

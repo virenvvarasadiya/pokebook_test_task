@@ -23,16 +23,16 @@ mixin _$PokemonTags {
   String get tag => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
-  $PokemonTagsCopyWith<PokemonTags> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PokemonTagsCopyWith<PokemonTags> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PokemonTagsCopyWith<$Res> {
-  factory $PokemonTagsCopyWith(
-          PokemonTags value, $Res Function(PokemonTags) then) =
+  factory $PokemonTagsCopyWith(PokemonTags value, $Res Function(PokemonTags) then) =
       _$PokemonTagsCopyWithImpl<$Res, PokemonTags>;
+
   @useResult
   $Res call({String tag});
 }
@@ -44,6 +44,7 @@ class _$PokemonTagsCopyWithImpl<$Res, $Val extends PokemonTags>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -62,11 +63,11 @@ class _$PokemonTagsCopyWithImpl<$Res, $Val extends PokemonTags>
 }
 
 /// @nodoc
-abstract class _$$PokemonTagsImplCopyWith<$Res>
-    implements $PokemonTagsCopyWith<$Res> {
+abstract class _$$PokemonTagsImplCopyWith<$Res> implements $PokemonTagsCopyWith<$Res> {
   factory _$$PokemonTagsImplCopyWith(
           _$PokemonTagsImpl value, $Res Function(_$PokemonTagsImpl) then) =
       __$$PokemonTagsImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call({String tag});
@@ -76,8 +77,7 @@ abstract class _$$PokemonTagsImplCopyWith<$Res>
 class __$$PokemonTagsImplCopyWithImpl<$Res>
     extends _$PokemonTagsCopyWithImpl<$Res, _$PokemonTagsImpl>
     implements _$$PokemonTagsImplCopyWith<$Res> {
-  __$$PokemonTagsImplCopyWithImpl(
-      _$PokemonTagsImpl _value, $Res Function(_$PokemonTagsImpl) _then)
+  __$$PokemonTagsImplCopyWithImpl(_$PokemonTagsImpl _value, $Res Function(_$PokemonTagsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,8 +99,7 @@ class __$$PokemonTagsImplCopyWithImpl<$Res>
 class _$PokemonTagsImpl implements _PokemonTags {
   const _$PokemonTagsImpl({required this.tag});
 
-  factory _$PokemonTagsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PokemonTagsImplFromJson(json);
+  factory _$PokemonTagsImpl.fromJson(Map<String, dynamic> json) => _$$PokemonTagsImplFromJson(json);
 
   @override
   final String tag;
@@ -139,13 +138,12 @@ class _$PokemonTagsImpl implements _PokemonTags {
 abstract class _PokemonTags implements PokemonTags {
   const factory _PokemonTags({required final String tag}) = _$PokemonTagsImpl;
 
-  factory _PokemonTags.fromJson(Map<String, dynamic> json) =
-      _$PokemonTagsImpl.fromJson;
+  factory _PokemonTags.fromJson(Map<String, dynamic> json) = _$PokemonTagsImpl.fromJson;
 
   @override
   String get tag;
+
   @override
   @JsonKey(ignore: true)
-  _$$PokemonTagsImplCopyWith<_$PokemonTagsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PokemonTagsImplCopyWith<_$PokemonTagsImpl> get copyWith => throw _privateConstructorUsedError;
 }

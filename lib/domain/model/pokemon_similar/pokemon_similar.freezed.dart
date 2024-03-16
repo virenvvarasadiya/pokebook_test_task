@@ -21,19 +21,20 @@ PokemonSimilar _$PokemonSimilarFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PokemonSimilar {
   String get pokemonName => throw _privateConstructorUsedError;
+
   String get pokemonImg => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
-  $PokemonSimilarCopyWith<PokemonSimilar> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PokemonSimilarCopyWith<PokemonSimilar> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PokemonSimilarCopyWith<$Res> {
-  factory $PokemonSimilarCopyWith(
-          PokemonSimilar value, $Res Function(PokemonSimilar) then) =
+  factory $PokemonSimilarCopyWith(PokemonSimilar value, $Res Function(PokemonSimilar) then) =
       _$PokemonSimilarCopyWithImpl<$Res, PokemonSimilar>;
+
   @useResult
   $Res call({String pokemonName, String pokemonImg});
 }
@@ -45,6 +46,7 @@ class _$PokemonSimilarCopyWithImpl<$Res, $Val extends PokemonSimilar>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -68,11 +70,11 @@ class _$PokemonSimilarCopyWithImpl<$Res, $Val extends PokemonSimilar>
 }
 
 /// @nodoc
-abstract class _$$PokemonSimilarsImplCopyWith<$Res>
-    implements $PokemonSimilarCopyWith<$Res> {
-  factory _$$PokemonSimilarsImplCopyWith(_$PokemonSimilarsImpl value,
-          $Res Function(_$PokemonSimilarsImpl) then) =
+abstract class _$$PokemonSimilarsImplCopyWith<$Res> implements $PokemonSimilarCopyWith<$Res> {
+  factory _$$PokemonSimilarsImplCopyWith(
+          _$PokemonSimilarsImpl value, $Res Function(_$PokemonSimilarsImpl) then) =
       __$$PokemonSimilarsImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call({String pokemonName, String pokemonImg});
@@ -108,8 +110,7 @@ class __$$PokemonSimilarsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PokemonSimilarsImpl implements _PokemonSimilars {
-  const _$PokemonSimilarsImpl(
-      {required this.pokemonName, required this.pokemonImg});
+  const _$PokemonSimilarsImpl({required this.pokemonName, required this.pokemonImg});
 
   factory _$PokemonSimilarsImpl.fromJson(Map<String, dynamic> json) =>
       _$$PokemonSimilarsImplFromJson(json);
@@ -129,10 +130,8 @@ class _$PokemonSimilarsImpl implements _PokemonSimilars {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PokemonSimilarsImpl &&
-            (identical(other.pokemonName, pokemonName) ||
-                other.pokemonName == pokemonName) &&
-            (identical(other.pokemonImg, pokemonImg) ||
-                other.pokemonImg == pokemonImg));
+            (identical(other.pokemonName, pokemonName) || other.pokemonName == pokemonName) &&
+            (identical(other.pokemonImg, pokemonImg) || other.pokemonImg == pokemonImg));
   }
 
   @JsonKey(ignore: true)
@@ -143,8 +142,7 @@ class _$PokemonSimilarsImpl implements _PokemonSimilars {
   @override
   @pragma('vm:prefer-inline')
   _$$PokemonSimilarsImplCopyWith<_$PokemonSimilarsImpl> get copyWith =>
-      __$$PokemonSimilarsImplCopyWithImpl<_$PokemonSimilarsImpl>(
-          this, _$identity);
+      __$$PokemonSimilarsImplCopyWithImpl<_$PokemonSimilarsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -159,13 +157,14 @@ abstract class _PokemonSimilars implements PokemonSimilar {
       {required final String pokemonName,
       required final String pokemonImg}) = _$PokemonSimilarsImpl;
 
-  factory _PokemonSimilars.fromJson(Map<String, dynamic> json) =
-      _$PokemonSimilarsImpl.fromJson;
+  factory _PokemonSimilars.fromJson(Map<String, dynamic> json) = _$PokemonSimilarsImpl.fromJson;
 
   @override
   String get pokemonName;
+
   @override
   String get pokemonImg;
+
   @override
   @JsonKey(ignore: true)
   _$$PokemonSimilarsImplCopyWith<_$PokemonSimilarsImpl> get copyWith =>

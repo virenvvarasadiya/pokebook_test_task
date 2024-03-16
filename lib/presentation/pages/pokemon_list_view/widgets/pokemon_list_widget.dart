@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:test_task/generated/assets.dart';
+import 'package:test_task/presentation/pages/pokemon_list_view/widgets/bottom_pagination_view.dart';
 import 'package:test_task/presentation/pages/pokemon_list_view/widgets/pokemon_card.dart';
 import 'package:test_task/presentation/pages/pokemon_list_view/widgets/pokemon_list_search_widget.dart';
 import 'package:test_task/utils/common_spacer.dart';
@@ -23,6 +24,7 @@ class PokemonListWidget extends StatelessWidget {
                 height(MediaQuery.of(context).size.height * 0.05),
                 const PokemonListingSearchWidget(),
                 const Expanded(child: PokemonCard()),
+                const BottomPaginationView()
               ],
             ),
           )
@@ -31,8 +33,7 @@ class PokemonListWidget extends StatelessWidget {
     );
   }
 
-
-  backgroundImage(context){
+  backgroundImage(context) {
     return Image.asset(
       Assets.pokemonImgPokemonBg,
       width: MediaQuery.of(context).size.width,

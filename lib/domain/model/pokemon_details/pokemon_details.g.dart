@@ -16,8 +16,7 @@ _$PokemonDetailsImpl _$$PokemonDetailsImplFromJson(Map<String, dynamic> json) =>
       defence: json['defence'] as int,
     );
 
-Map<String, dynamic> _$$PokemonDetailsImplToJson(
-        _$PokemonDetailsImpl instance) =>
+Map<String, dynamic> _$$PokemonDetailsImplToJson(_$PokemonDetailsImpl instance) =>
     <String, dynamic>{
       'height': instance.height,
       'weight': instance.weight,

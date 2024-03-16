@@ -16,15 +16,19 @@ class PokemonCard extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         } else if (state is PokemonLoadSuccess) {
-          List<Pokemon> pokemonList = state.pokemon;
-          return ListView.builder(
-            shrinkWrap: true,
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            itemCount: pokemonList.length,
-            itemBuilder: (context, index) {
-              return pokemonCard(context: context, pokemon: pokemonList[index]);
-            },
-          );
+          List<Pokemon>? pokemonList = state.pokemon;
+          if (pokemonList != null) {
+            return ListView.builder(
+              shrinkWrap: true,
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              itemCount: pokemonList.length,
+              itemBuilder: (context, index) {
+                return pokemonCard(context: context, pokemon: pokemonList[index]);
+              },
+            );
+          } else {
+            context.read<PokemonBloc>().add(PaginatePokemonDataEvent(1));
+          }
         }
         return Container();
       },

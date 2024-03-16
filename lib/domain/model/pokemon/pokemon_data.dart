@@ -2,7 +2,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:test_task/domain/model/pokemon_details_data/pokemon_model.dart';
 
 part 'pokemon_data.freezed.dart';
-
 part 'pokemon_data.g.dart';
 
 @Freezed()

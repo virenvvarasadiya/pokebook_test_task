@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    PokemonDetailsViewRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const PokemonDetailsViewScreen(),
+      );
+    },
     PokemonHomeViewRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -28,6 +34,20 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [PokemonDetailsViewScreen]
+class PokemonDetailsViewRoute extends PageRouteInfo<void> {
+  const PokemonDetailsViewRoute({List<PageRouteInfo>? children})
+      : super(
+          PokemonDetailsViewRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PokemonDetailsViewRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

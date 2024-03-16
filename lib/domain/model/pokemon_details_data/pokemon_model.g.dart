@@ -6,8 +6,7 @@ part of 'pokemon_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PokemonImpl _$$PokemonImplFromJson(Map<String, dynamic> json) =>
-    _$PokemonImpl(
+_$PokemonImpl _$$PokemonImplFromJson(Map<String, dynamic> json) => _$PokemonImpl(
       pokemonName: json['pokemonName'] as String?,
       pokemonImg: json['pokemonImg'] as String?,
       pokemonTags: (json['pokemonTags'] as List<dynamic>?)
@@ -15,15 +14,13 @@ _$PokemonImpl _$$PokemonImplFromJson(Map<String, dynamic> json) =>
           .toList(),
       pokemonDetails: json['pokemonDetails'] == null
           ? null
-          : PokemonDetails.fromJson(
-              json['pokemonDetails'] as Map<String, dynamic>),
+          : PokemonDetails.fromJson(json['pokemonDetails'] as Map<String, dynamic>),
       similar: (json['similar'] as List<dynamic>?)
           ?.map((e) => PokemonSimilar.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$PokemonImplToJson(_$PokemonImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$PokemonImplToJson(_$PokemonImpl instance) => <String, dynamic>{
       'pokemonName': instance.pokemonName,
       'pokemonImg': instance.pokemonImg,
       'pokemonTags': instance.pokemonTags,

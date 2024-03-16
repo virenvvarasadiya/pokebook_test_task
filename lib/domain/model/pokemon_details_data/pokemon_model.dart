@@ -4,7 +4,6 @@ import 'package:test_task/domain/model/pokemon_similar/pokemon_similar.dart';
 import 'package:test_task/domain/model/pokemon_tags/pokemon_tag.dart';
 
 part 'pokemon_model.freezed.dart';
-
 part 'pokemon_model.g.dart';
 
 @Freezed()
